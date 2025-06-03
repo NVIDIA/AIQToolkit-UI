@@ -58,7 +58,9 @@ export const InteractionModal = ({ isOpen, interactionMessage, onClose, onSubmit
         </button>
       </div>
     ), {
-      position: 'top-right'
+      position: 'top-right',
+      duration: Infinity,
+      id: 'notification-toast'
     })
     return null
   }
