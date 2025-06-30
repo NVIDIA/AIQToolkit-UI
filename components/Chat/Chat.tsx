@@ -477,7 +477,7 @@ export const Chat = () => {
             type: webSocketMessageTypes.userMessage,
             schema_type: sessionStorage.getItem('webSocketSchema') || webSocketSchema,
             id: message?.id,
-            thread_id: selectedConversation.id,
+            conversation_id: selectedConversation.id,
             content: {
               messages: chatMessages
             },
@@ -518,7 +518,7 @@ export const Chat = () => {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
-              'Thread-Id': selectedConversation?.id || '',
+              'Conversation-Id': selectedConversation?.id || '',
             },
             signal: controllerRef.current.signal, // Use ref here
             body,
