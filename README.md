@@ -49,12 +49,12 @@ The application will be available at `http://localhost:3000`
 #### Docker Deployment
 ```bash
 # Build the Docker image
-docker build -t AIQ Toolkit-UI .
+docker build -t aiqtoolkit-ui .
 
 # Run the container with environment variables from .env
 # Ensure the .env file is present before running this command.
 # Skip --env-file .env if no overrides are needed.
-docker run --env-file .env -p 3000:3000 AIQ Toolkit-UI
+docker run --env-file .env -p 3000:3000 aiqtoolkit-ui
 ```
 
 ![AIQ Toolkit Web User Interface](public/screenshots/ui_home_page.png)
